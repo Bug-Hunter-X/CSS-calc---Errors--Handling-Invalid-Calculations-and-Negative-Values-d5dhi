@@ -1,0 +1,21 @@
+/* bugSolution.css */
+
+/* Avoid negative widths by using max() within a preprocessor (example using Sass): */
+width: max(0, calc(100% - 200px));
+
+/* Handle potential invalid inputs more gracefully (example using a fallback): */
+margin: calc(10px + 20px);
+margin: 30px; /* Fallback if the calculation is invalid */
+
+/* Ensure unit consistency */
+height: calc(100px + 50%); /* Correct: consistent units */
+/* Incorrect: inconsistent unit mix */
+/* height: calc(100px + 50); */
+
+/*  Example using media queries to adjust styles based on screen size  */
+@media (max-width: 600px) {
+  width: calc(100% - 20px);
+}
+@media (min-width: 601px) {
+  width: calc(100% - 100px);
+}
